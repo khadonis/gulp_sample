@@ -1,1 +1,6 @@
-var delele = 'sgdfgsdfgsdg';
+/*
+**************************
+ my custom javascript file
+**************************
+ */
+var sample = 'sample';
