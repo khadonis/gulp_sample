@@ -8,11 +8,15 @@ watch = require('gulp-watch'),
 imagemin = require('gulp-imagemin'),
 cache = require('gulp-cache'),
 gulpImport = require('gulp-html-import'),
+autoprefixer = require('gulp-autoprefixer'),
 sass = require('gulp-sass');
 
 gulp.task('sass', function(){
 	gulp.src('app/sass/app.scss')
 	.pipe(sass())
+	.pipe(autoprefixer({
+            browsers: ['last 2 versions']
+        }))
 	.pipe(gulp.dest('app/css'))
 	.pipe(cleanCSS())
 	.pipe(rename('app.min.css'))
